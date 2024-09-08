@@ -1,0 +1,49 @@
+.payment-booking-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .payment-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    text-align: center;
+  }
+  
+  .payment-success, .payment-cancel {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+  
+  .payment-success {
+    color: #52c41a; /* Ant Design green for success */
+  }
+  
+  .payment-cancel {
+    color: #ff4d4f; /* Ant Design red for error */
+  }
+  
+  .font-content h3 {
+    font-weight: bold;
+  }
+  
+  .button-primary {
+    background-color: #1890ff; /* Ant Design blue */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 15px;
+  }
+  
+  .button-primary:hover {
+    background-color: #40a9ff;
+  }
+  
+  .button-primary:focus {
+    background-color: #096dd9;
+  }
+  

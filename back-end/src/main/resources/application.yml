@@ -1,0 +1,30 @@
+# application.properties
+spring:
+  application:
+    name: back-end
+  datasource:
+    url: jdbc:mysql://localhost:3306/payment_system
+    username: root
+    password: password1234
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+        show_sql: true
+        format_sql: true
+    hibernate:
+      ddl-auto: update
+
+application:
+  frontend:
+    url: http://localhost:3000
+  backend:
+    url: http://localhost:8080
+  paypal:
+    client-id: AU06lIPNQMm0onL8NczeNhNE3OhQgm4R31VSqnzbRIQIWYeZSAC1dwvAqTEfNzU_c68it7yVvkzSM99H
+    client-secret: ECdPA1hUYLd2ZqOGCgEDkqjskLNad2qM3499U1O0jtS0tWfUL92bghI03Zkd6ZMU-rOv9r9d1t4YQ9UN
+    mode: sandbox # Use #sandbox' for testing and 'live' for Production
+    email: assistant.system@business.example.com
+    execute-url: ${PAYPAL_SUCCESS_URL:http://localhost:3000/payment/execute}
+    cancel-url: ${PAYPAL_CANCEL_URL:http://localhost:3000/payment/cancel}
