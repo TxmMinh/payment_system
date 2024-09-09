@@ -62,6 +62,9 @@ const PaymentForm = () => {
                         <Button type="primary" htmlType="submit" block>
                             Pay with Paypal
                         </Button>
+                        <a href="/">
+                            <Button type="primary" className="button-primary">Return to Home</Button>
+                        </a>
                     </Form.Item>
                 </Form>
             </Card>

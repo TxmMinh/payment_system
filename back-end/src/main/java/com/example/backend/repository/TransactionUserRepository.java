@@ -14,4 +14,6 @@ public interface TransactionUserRepository extends JpaRepository<TransactionUser
             " t.gross as gross, t.net as net, t.fee as fee, t.description as description, t.createdDate as createdDate " +
             "FROM TransactionUser t")
     Page<TransactionUserResponseDto> getAllTransactionUser(Pageable pageable);
+
+    boolean existsByTransactionId(String transactionId);
 }

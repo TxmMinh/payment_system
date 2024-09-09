@@ -47,6 +47,10 @@ public class PaymentTransactionServiceImpl implements PaymentTransactionService 
         TransactionUser transactionUser = this.createTransactionUser(walletUser, payment);
 
         if (payment.getState().equals("approved")) {
+             if (transactionUserRepository.existsByTransactionId(transactionId)) {
+                log.info("Transaction with ID {} already exists.", transactionId);
+                return;
+            }
             // increase balance in wallet system
             this.addBalanceToWalletUser(walletUser, transactionUser);
             transactionUserRepository.save(transactionUser);
